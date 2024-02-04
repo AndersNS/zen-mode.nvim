@@ -54,7 +54,7 @@ function M.alacritty(state, disable, opts)
   end
   local cmd = "alacritty msg config -w %s font.size=%s"
   local reset_cmd = "alacritty msg config -w %s --reset"
-  local win_id = vim.fn.expand("$ALACRITTY_WINDOW_ID")
+  local win_id = vim.fn.expand("$WINDOWID")
   if disable then
     vim.fn.system(cmd:format(win_id, opts.font))
   else
